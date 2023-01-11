@@ -1,7 +1,8 @@
-import 'package:auth_service/auth.dart';
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
+
+import '../../../../packages/auth_service/lib/auth.dart';
 part 'signup_event.dart';
 part 'signup_state.dart';
 

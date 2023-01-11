@@ -1,10 +1,11 @@
-import 'package:firebase_auth_bloc_example/home/view/home_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../bloc/signup_bloc.dart';
 
 class SignUpView extends StatelessWidget {
+  const SignUpView({super.key});
+
   @override
   Widget build(BuildContext context) {
     return BlocListener<SignupBloc, SignupState>(
@@ -40,11 +41,11 @@ class _SignupForm extends StatelessWidget {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [
+          children: const [
             _CreateAccountEmail(),
-            const SizedBox(height: 30.0),
+             SizedBox(height: 30.0),
             _CreateAccountPassword(),
-            const SizedBox(height: 30.0),
+             SizedBox(height: 30.0),
             _SubmitButton(),
           ],
         ),
@@ -54,7 +55,7 @@ class _SignupForm extends StatelessWidget {
 }
 
 class _CreateAccountEmail extends StatelessWidget {
-  _CreateAccountEmail({
+  const _CreateAccountEmail({
     Key? key,
   }) : super(key: key);
 
@@ -73,7 +74,7 @@ class _CreateAccountEmail extends StatelessWidget {
 }
 
 class _CreateAccountPassword extends StatelessWidget {
-  _CreateAccountPassword({
+  const _CreateAccountPassword({
     Key? key,
   }) : super(key: key);
 
@@ -95,7 +96,7 @@ class _CreateAccountPassword extends StatelessWidget {
 }
 
 class _SubmitButton extends StatelessWidget {
-  _SubmitButton({
+  const _SubmitButton({
     Key? key,
   }) : super(key: key);
 
@@ -103,7 +104,7 @@ class _SubmitButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       onPressed: () => context.read<SignupBloc>().add(
-            SignupButtonPressedEvent(),
+            const SignupButtonPressedEvent(),
           ),
       child: const Text('Create Account'),
     );

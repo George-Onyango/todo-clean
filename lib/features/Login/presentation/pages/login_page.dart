@@ -1,8 +1,9 @@
-import 'package:auth_service/auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:todo/packages/auth_service/lib/auth.dart';
 
 import '../bloc/login_bloc.dart';
+import 'login_view.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -12,7 +13,7 @@ class LoginPage extends StatelessWidget {
       create: (context) => LoginBloc(
         authService: context.read<FirebaseAuthService>(),
       ),
-      child: LoginView(),
+      child: const LoginView(),
     );
   }
 }

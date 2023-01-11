@@ -4,6 +4,8 @@ import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter/widgets.dart';
 
+import '../../../../packages/auth_service/lib/auth.dart';
+
 part 'login_event.dart';
 part 'login_state.dart';
 

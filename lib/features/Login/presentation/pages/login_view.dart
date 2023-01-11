@@ -5,6 +5,8 @@ import '../../../signup/presentation/pages/signup_page.dart';
 import '../bloc/login_bloc.dart';
 
 class LoginView extends StatelessWidget {
+  const LoginView({super.key});
+
   @override
   Widget build(BuildContext context) {
     return BlocListener<LoginBloc, LoginState>(
@@ -40,7 +42,7 @@ class _LoginForm extends StatelessWidget {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [
+          children: const [
              _LoginEmail(),
              SizedBox(height: 30.0),
              _LoginPassword(),
